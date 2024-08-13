@@ -2,7 +2,7 @@
 
 namespace IDP
 {
-    public class LoggerService
+    internal class LoggerService
     {
         static LoggerService()
         {
@@ -13,9 +13,6 @@ namespace IDP
                 .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day) // Ausgabe der Logs in eine Datei, die täglich rotiert
                 .CreateLogger();
         }
-        public static void Initialize()
-        {
-            Log.Information("Logger wurde initialisiert.");
-        }
+        internal static void Initialize(){}
     }
 }
